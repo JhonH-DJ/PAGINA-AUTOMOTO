@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>INTRO</title>
+</head>
+<style>
+    body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+</style>
+<body>
+    <div class="video-container">
+        <video id="myVideo" controls autoplay onended="redirectToPage()">
+            <source src="Intro.mp4" type="video/mp4">
+                
+        </video>
+    </div>
+
+    <script>
+          function redirectToPage() {
+            window.location.href = "file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/EMPRESA.html"; // Redirige a la siguiente página;
+        }
+    </script>
+</body>
+</html>
