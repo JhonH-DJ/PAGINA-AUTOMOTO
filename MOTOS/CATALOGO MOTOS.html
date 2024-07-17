@@ -1,0 +1,478 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Catálogo de Motos</title>
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/PRINCIPA/IMAG-VIDE/relapago.jpg"); 
+        }
+        
+
+    header {
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    display: inline-block; 
+    position: relative;
+}
+
+.logo img {
+    height: 90px; /* Ajusta el tamaño del logo según tus necesidades */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Sombra para el efecto de llamas rojas */
+    transition: box-shadow 0.3s ease; /* Transición para la sombra */
+    animation: heartbeat 1.5s infinite; /* Animación de latido */
+}
+
+.logo img:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8); /* Sombra más intensa al pasar el mouse */
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+    }
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-container input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 300px; /* Ajusta el tamaño del campo de búsqueda según tus necesidades */
+    transition: width 0.3s ease; /* Transición para el ancho del input */
+    outline: none; /* Elimina el contorno predeterminado al estar enfocado */
+    box-shadow: 0 0 70px rgba(0, 0, 255, 0.5); /* Sombra para el efecto de llamas azules */
+}
+
+.search-container input:focus {
+    width: 600px; /* Ancho aumentado cuando el input está enfocado */
+    box-shadow: 0 0 90px rgba(0, 0, 255, 0.8); /* Sombra más intensa al estar enfocado */
+}
+
+.search-button {
+    background-color: #0051ff;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+.cart-icon {
+    height: 80px; /* Ajusta el tamaño del ícono del carrito según tus necesidades */
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #000000;
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 90px; /* Adjusted for header height */
+    height: calc(100% - 60px); /* Adjusted for header height */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    color: white; /* Color de texto blanco */
+    text-shadow: 
+        0 0 5px #00f, /* Sombra azul */
+        0 0 10px #00f, /* Sombra azul más grande */
+        0 0 15px #00f, /* Sombra azul aún más grande */
+        0 0 20px rgb(8, 50, 168), /* Sombra azul claro */
+        0 0 30px rgb(30, 7, 236), /* Sombra azul claro más grande */
+        0 0 40px rgb(17, 0, 255), /* Sombra azul claro aún más grande */
+        0 0 50px rgb(3, 77, 214); /* Sombra azul claro más grande */
+}
+    
+    
+        .filter-container input,
+        .filter-container select {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .price-filter {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .price-filter label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .price-filter input {
+            width: 100%;
+        }
+        .price-filter span {
+            display: block;
+            margin-top: 5px;
+            text-align: right;
+        }
+        .filter-container button {
+            display: inline-block;
+                color: transparent;
+                border: 2px solid #001ea0;
+                padding: 10px;
+                cursor: pointer;
+                background-image: linear-gradient(to right, #1c04a3, #ffffff);
+                -webkit-background-clip: text;
+                background-clip: text;
+                text-shadow: none;
+                width: 100%;
+                margin-top: auto; /* pushes button to the bottom */
+                font-size: 18px;
+}
+
+.filter-container button:hover{
+    color: rgb(12, 247, 110);
+}
+        
+        
+        .catalog-container {
+    margin-left: 300px; /* Adjust margin to move the catalog more to the right */
+    padding: 40px;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Gap between items */
+    margin-top: 120px; /* Adjust for header height */
+}
+
+.image-container {
+    position: relative;
+    width: 300px; /* Ajusta el ancho según tu necesidad */
+    height: 250px; /* Ajusta la altura según tu necesidad */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease; /* Añade una transición suave para el efecto de zoom */
+}
+
+.image-container:hover img {
+    transform: scale(1.2); /* Ajusta el valor de escala según el nivel de zoom deseado */
+}
+.catalog {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+        .catalog-item {
+            background-color: #000000;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 75px;
+            width: calc(33.33% - 20px); /* three items per row */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ffffff;
+        }
+        .catalog-item img {
+    width: 110%;
+    transition: transform 0.3s ease;
+}
+
+.catalog-item img:hover {
+    transform: scale(1.2); /* Ajusta el valor para el nivel de zoom deseado */
+}
+        .catalog-item h3 {
+    margin: 10px 0;
+    text-align: center;
+    color: white; /* Color del texto blanco */
+    text-shadow: 
+        0 0 5px #00f, /* Sombra azul */
+        0 0 10px #00f, /* Sombra azul más grande */
+        0 0 15px #00f, /* Sombra azul aún más grande */
+        0 0 20px rgb(8, 50, 168), /* Sombra azul claro */
+        0 0 30px rgb(30, 7, 236), /* Sombra azul claro más grande */
+        0 0 40px rgb(17, 0, 255), /* Sombra azul claro aún más grande */
+        0 0 50px rgb(3, 77, 214); /* Sombra azul claro más grande */
+}
+        .catalog-item p {
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .catalog-item .new-price {
+            font-weight: bold;
+        }
+        .catalog-item button {
+                display: inline-block;
+                color: transparent;
+                border: 2px solid #001ea0;
+                padding: 10px;
+                cursor: pointer;
+                background-image: linear-gradient(to right, #1c04a3, #ffffff);
+                -webkit-background-clip: text;
+                background-clip: text;
+                text-shadow: none;
+                width: 100%;
+                margin-top: auto; /* pushes button to the bottom */
+                font-size: 18px;
+            }
+
+            .catalog-item button:hover {
+    color: rgb(12, 247, 110); /* Cambia el color del texto a blanco al pasar el cursor */
+}
+        
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+</style>
+
+        
+</head>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/PRINCIPA/PRINCIPAL.html  ">
+            <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\logo.png" alt="Logo">
+        </a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar...">
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="cart-icon-container">
+            <button id="cart-icon-button">
+                <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\carrito.png"  alt="Carrito de Compras" class="cart-icon" id="cart-icon">
+            </button>
+        </div>
+    </div>
+</header>    
+<br>
+<br>
+<body>
+    <div class="filter-container">
+        <br><br>
+        <select id="marca">
+            <option value="">Marca</option>
+            <option>PULSAR</option>
+            <!-- Agrega más opciones según sea necesario -->
+        </select>
+        <P>PRECIO</p>  
+        <p>KILOMETRAJE</p>
+        <p>COLOR</p><br>
+        <div class="price-filter">
+            <label for="price">PRECIO</label>
+            <input type="range" id="price" min="2100" max="31500" value="32000" oninput="updatePriceValue()">
+            <span id="price-value">S/ 32 000</span>
+        </div>
+        <button onclick="filterCatalog()">FILTRAR</button>
+        <button onclick="clearFilters()">BORRAR</button>
+        <br><br><br><br>
+</div>
+
+    <div class="catalog-container" id="catalog">
+        <div class="catalog-item">
+            <div class="image-container">
+                <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/MOTOS/PULSAR/RS200/RS%20200.html">
+                <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\MOTOS\PULSAR\RS200\RS B.png" alt="Default Image" class="default-image">
+            </a></div>
+            <h3>PULSAR RS 200</h3><br><br>
+            <p><span class="new-price">S/ 17,792</span></p>
+            <p>140 Km/h</p>
+            <p>OCTUBRE 2015</p><br><br>
+            <button>AGREGAR AL CARRITO</button>
+        </div>
+        <div class="catalog-item">
+            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/MOTOS/PULSAR/150R/150%20R.html">
+            <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\MOTOS\PULSAR\150R\150R  R.png" alt="Default Image" class="default-image">
+            </a>
+            <h3>PULSAR 150R </h3><br><br>
+            <p>S/ 9,116</p>
+            <p>115 Km/h</p>
+            <p>JUNIO 2021</p><br><br>
+            <button>AGREGAR AL CARRITO</button>
+        </div>
+        <div class="catalog-item">
+            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/MOTOS/PULSAR/N250/N250.html">
+            <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\MOTOS\PULSAR\N250\N250.png" alt="Default Image" class="default-image">
+            </a>
+            <h3>PULSAR N250</h3><br><br>
+            <p>S/.13,000</p>
+            <p>140 Km</p>
+            <p>Mayo 2020</p><br><br>
+            <button>AGREGAR AL CARRITO</button>
+        </div>
+        <div class="catalog-item">
+            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/MOTOS/PULSAR/150%20NEON/150%20NEON.html">
+            <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\MOTOS\PULSAR\150 NEON\150 NEON R.png" alt="Default Image" class="default-image">
+            </a>
+            <h3>PULSAR 150 NEON</h3><br><br>
+            <p>S/.8,546</p>
+            <p>115km/h</p>
+            <p>Diciembre 2020</p><br><br>
+            <button>AGREGAR AL CARRITO</button>
+        </div>
+        <div class="catalog-item">
+            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/MOTOS/PULSAR/NS%20160%20TD%20ABS/NS%20160%20TD%20ABS.html">
+            <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\MOTOS\PULSAR\NS 160 TD ABS\NS 160 TD ABS AZUL.png" alt="Default Image" class="default-image">
+        </a>
+            <h3>PULSAR NS 160 TD ABS</h3><br>
+            <p>S/.9,678</p>
+            <p>500Km</p>
+            <p>Diciembre 2022</p><br><br>
+            <button>AGREGAR AL CARRITO</button>
+        </div>
+        <div class="catalog-item">
+            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/MOTOS/PULSAR/160%20DT%20ABS%20UG/160%20DT%20ABS%20UG.html">
+            <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\MOTOS\PULSAR\160 DT ABS UG\160 DT ABS UG R.png" alt="Default Image" class="default-image">
+        </a>
+            <h3>PULSAR 160 DT ABS UG</h3><br>
+            <p>S/.10,599</p>
+            <p>500 km</p>
+            <p>Febrero 2016</p><br><br>
+            <button>AGREGAR AL CARRITO</button>
+        </div>
+        <div class="catalog-item">
+            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/MOTOS/PULSAR/NS%20125/NS%20125.html">
+            <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\MOTOS\PULSAR\NS 125\NS 125 A.png" alt="Default Image" class="default-image">
+        </a>
+            <h3>PULSAR NS 125</h3><br><br>
+            <p>S/.6,691</p>
+            <p>115 km por hora</p>
+            <p>Febrero 2001</p><br><br>
+            <button>AGREGAR AL CARRITO</button>
+        </div>
+        <div class="catalog-item">
+            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/MOTOS/PULSAR/NS200%20FI/NS200%20FI.html">
+            <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\MOTOS\PULSAR\NS200 FI\NS200 FI AZ.png" alt="Default Image" class="default-image">
+            </a>
+            <h3>PULSAR NS200 FI</h3><br><br>
+            <p>S/.13,838</p>
+            <p>129 km/hr</p>
+            <p>Febrero 2012</p><br><br>
+            <button>AGREGAR AL CARRITO</button>
+        </div>
+    </div>
+
+    <script>
+    function updatePriceValue() {
+    var price = document.getElementById("price").value;
+    var formattedPrice = formatCurrency(price);
+    document.getElementById("price-value").textContent = formattedPrice;
+}
+
+function formatCurrency(amount) {
+    var formatted = "S/ " + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return formatted;
+}
+
+        function filterCatalog() {
+            // Lógica para filtrar el catálogo
+        }
+
+        function clearFilters() {
+            document.getElementById('search').value = '';
+            document.getElementById('marca').value = '';
+            document.getElementById('modelo').value = '';
+            document.getElementById('tipo').value = '';
+            document.getElementById('carnet').value = '';
+            document.getElementById('price').value = '31500';
+            updatePriceValue();
+        }
+
+    items.forEach(item => {
+        const itemPriceText = item.querySelector('.new-price') ? item.querySelector('.new-price').innerText : item.querySelector('p').innerText;
+        const itemPrice = parseInt(itemPriceText.replace(' €', '').replace(',', ''));
+        if (itemPrice <= price) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    document.querySelectorAll('.catalog-item').forEach(item => {
+    const images = JSON.parse(item.getAttribute('data-images'));
+    let currentIndex = 0;
+
+    let interval;
+
+    item.addEventListener('mouseover', () => {
+        interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            item.querySelector('img').src = images[currentIndex];
+        }, 1000); // Cambia la imagen cada 1 segundo
+    });
+
+    item.addEventListener('mouseout', () => {
+        clearInterval(interval);
+        item.querySelector('img').src = images[0];
+    });
+});
+
+
+document.getElementById('cart-icon-button').addEventListener('click', function() {
+    var cartContainer = document.getElementById('cart-container');
+    if (cartContainer.classList.contains('hidden')) {
+        cartContainer.classList.remove('hidden');
+    } else {
+        cartContainer.classList.add('hidden');
+    }
+});
+
+    </script>
+</body>
+</html>

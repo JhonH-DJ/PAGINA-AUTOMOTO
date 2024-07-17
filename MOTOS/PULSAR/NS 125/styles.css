@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/playa.jpg"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    
+}
+
+.volver-btn {
+    position: absolute;
+    left: 0px; /* Ajusta el valor de left según la posición deseada */
+    top: 60px; /* Ajusta el valor de top según la posición deseada */
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    padding: 10px 40px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.volver-btn:hover {
+    background-color: #00bfff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    margin-top: 50px;
+    font-size: 2em;
+    color: white;
+    text-shadow: 
+        0 0 5px #ff4500, /* Sombra naranja */
+        0 0 10px #ff4500, /* Sombra naranja */
+        0 0 20px #ff4500, /* Sombra naranja */
+        0 0 40px #ff4500, /* Sombra naranja */
+        0 0 80px #ff4500, /* Sombra naranja */
+        0 0 160px #ff4500; /* Sombra naranja */
+        animation: changeColor 2s infinite alternate;
+        }
+    
+        @keyframes changeColor {
+    50% {
+        text-shadow:
+            0 0 5px #ff4500,
+            0 0 10px #ff4500,
+            0 0 20px #ff4500,
+            0 0 40px #ff4500,
+            0 0 80px #ff4500,
+            0 0 160px #ff4500;
+    }
+
+    95% {
+        text-shadow:
+            0 0 5px #32cd32, /* Sombra verde */
+            0 0 10px #32cd32, /* Sombra verde */
+            0 0 20px #32cd32, /* Sombra verde */
+            0 0 40px #32cd32, /* Sombra verde */
+            0 0 80px #32cd32, /* Sombra verde */
+            0 0 160px #32cd32; /* Sombra verde */
+    }
+
+    75% {
+        text-shadow:
+            0 0 5px #8a2be2, /* Sombra morada */
+            0 0 10px #8a2be2, /* Sombra morada */
+            0 0 20px #8a2be2, /* Sombra morada */
+            0 0 40px #8a2be2, /* Sombra morada */
+            0 0 80px #8a2be2, /* Sombra morada */
+            0 0 160px #8a2be2; /* Sombra morada */
+    }
+
+    100% {
+        text-shadow:
+            0 0 5px #00bfff, /* Sombra azul */
+            0 0 10px #00bfff, /* Sombra azul */
+            0 0 20px #00bfff, /* Sombra azul */
+            0 0 40px #00bfff, /* Sombra azul */
+            0 0 80px #00bfff, /* Sombra azul */
+            0 0 160px #00bfff; /* Sombra azul */
+    }
+        
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.specifications {
+    width: 45%;
+}
+
+.spec {
+    background-color: rgba(255, 255, 255, 0.233);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.spec h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-shadow: 
+            0 0 5px #0059ff, /* Sombra azul */
+            0 0 10px #0059ff, /* Sombra azul */
+            0 0 20px #0059ff, /* Sombra azul */
+            0 0 40px #0059ff, /* Sombra azul */
+            0 0 80px #0059ff, /* Sombra azul */
+            0 0 160px #0059ff; /* Sombra azul */
+        }
+
+        .spec p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            color: #000000;
+            font-weight: bold;
+            text-align: justify;
+        }
+
+.promo {
+    background-color: #ffefc2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c518;
+}
+
+.price {
+    font-size: 38px;
+    background-color: #000000;
+    color: #ffffff;
+    text-shadow: 
+            0 0 5px #0059ff, /* Sombra azul */
+            0 0 10px #0059ff, /* Sombra azul */
+            0 0 20px #0059ff, /* Sombra azul */
+            0 0 40px #0059ff, /* Sombra azul */
+            0 0 80px #0059ff, /* Sombra azul */
+            0 0 160px #0059ff; /* Sombra azul */
+    margin: 5px 180px;
+}
+
+.image {
+    text-align: center;
+    position: relative;
+    left: 90px; /* Ajusta este valor para mover la imagen más a la derecha */
+}
+
+.motorcycle-image {
+    max-width: 500px; /* Ajusta este valor para cambiar el tamaño de la imagen */
+    height: auto;
+    display: none;
+}
+
+#default-image {
+    display: block; /* Mostrar la imagen por defecto */
+}
+
+.color-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.color-button {
+    width: 40px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.color-button[data-color="yellow-image"] {
+    background-color: yellow;
+}
+.color-button[data-color="gray-image"] {
+    background-color: gray;
+}
+.color-button[data-color="black-image"] {
+    background-color: black;
+}
+.color-button[data-color="red-image"] {
+    background-color: red;
+}
+
+.buttons {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+button {
+    padding: 20px 30px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button.add-to-cart {
+    background-color: #000000;
+}
+
+button.add-to-cart:hover{
+    color:#00f7ff
+}   
+
+.image-ref {
+    font-size: 20px; 
+    color:white;
+    text-shadow: 
+            0 0 5px #0059ff, /* Sombra azul */
+            0 0 10px #0059ff, /* Sombra azul */
+            0 0 20px #0059ff, /* Sombra azul */
+            0 0 40px #0059ff, /* Sombra azul */
+            0 0 80px #0059ff, /* Sombra azul */
+            0 0 160px #0059ff; /* Sombra azul */
+}
+
+
+
