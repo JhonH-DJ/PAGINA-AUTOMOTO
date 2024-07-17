@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/DESARROLO/playa.jpg");
+    background-image: url("playa.jpg");
     color: white;
 
 }
@@ -66,7 +66,7 @@ body {
 
 .form-section {
     padding: 40px;
-    background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/Fondo.jpg");
+    background-image: url("fugos.jpg");
     border-radius: 10px;
     margin: 20px auto;
     max-width: 600px;
@@ -96,7 +96,7 @@ body {
 
 .catalog-section {
     padding: 40px;
-    background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/relapago.jpg");
+    background-image: url("relapago.jpg");
     border-radius: 10px;
     margin: 20px auto;
     max-width: 5200px;
