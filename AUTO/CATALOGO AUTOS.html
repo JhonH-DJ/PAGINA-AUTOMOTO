@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALOGO DE AUTOS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <div class="image-container">
+                <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\auto amarillo.jpg" alt="Hero Image" id="heroImage">
+                <div class="points">
+                    <span class="point active" data-image="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\aunto crem.jpg"></span>
+                    <span class="point" data-image="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\auto naranja.jpg"></span>
+                    <span class="point" data-image="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\pexels-anewevisual-7537127.jpg"></span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>¿Tienes tu Auto en mente?</h2>
+            <form>
+                <label for="vehicle-type">Tipo de vehículo</label>
+                <select id="vehicle-type">
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <!-- Agregar más opciones según sea necesario -->
+                </select>
+                <label for="price">Precio</label>
+                <input type="range" id="price" name="price" min="21990" max="43990">
+                <div class="price-range">
+                    <span>S/.50,990</span>
+                    <span>S/.143,990</span>
+                </div>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section class="catalog-section">
+            <h2>Catálogo de Vehículos</h2>
+            <div class="catalog">
+                <div class="vehicle-card">
+            <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\AUTO\LAMBORGHINI Aventador LP740-4 S\adsf.png" alt="Modelo de vehículo 1">
+                    <h3>LAMBORGHINI Aventador LP740-4 S</h3>
+                    <p>Año: 2018</p>
+                    <p>Precio:S/. 1 890,690.00</p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\AUTO\Ferrari 430 F430 2008 cupé\1.png" alt="Modelo de vehículo 2">
+                    <h3>Ferrari 430 F430 2008 cupé</h3>
+                    <p>Año: 2021</p>
+                    <p>Precio:S/. 2 197 437.87 </p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\AUTO\Ferrari SF90 Spider 2024 convertible 2D\12.png" alt="Modelo de vehículo 3">
+                    <h3>Ferrari SF90 Spider 2024</h3>
+                    <p>Año: 2022</p>
+                    <p>Precio:S/. 2 483 890.79</p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\AUTO\LAMBORGHINI Huracán STO RWD\as.png" alt="Modelo de vehículo 4">
+                    <h3>LAMBORGHINI Huracán STO RWD</h3>
+                    <p>Año: 2019</p>
+                    <p>Precio:S/. 1 378 382.00</p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\AUTO\LAMBORGHINI Aventador LP770-4 SVJ\qed.png" alt="Modelo de vehículo 5">
+                    <h3>LAMBORGHINI Aventador LP770-4 SVJ</h3>
+                    <p>Año: 2020</p>
+                    <p>Precio: 2 285 295.79</p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\AUTO\Ferrari 458 Italia 2010\asfc.png " alt="Modelo de vehículo 6">
+                    <h3>Ferrari 458 Italia 2010</h3>
+                    <p>Año: 2022</p>
+                    <p>Precio:S/. 1 638 672.52
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

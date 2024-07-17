@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/DESARROLO/playa.jpg");
+    color: white;
+
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.image-container {
+    width: 100%;
+    height: 80vh; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+#heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover will ensure the image covers the entire container */
+}
+
+.points {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.point.active {
+    background-color: white;
+}
+
+
+.hero-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero-text h1, .hero-text h2, .hero-text p {
+    margin: 10px 0;
+}
+
+.hero-text .price {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-section {
+    padding: 40px;
+    background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/Fondo.jpg");
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.form-section h2 {
+    text-align: center;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section label {
+    margin: 10px 0 5px;
+}
+
+.form-section input[type="range"] {
+    margin: 10px 0;
+}
+
+.form-section .price-range {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-section {
+    padding: 40px;
+    background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/relapago.jpg");
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 5200px;
+}
+
+.catalog-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.vehicle-card {
+    background-color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.vehicle-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.vehicle-card h3 {
+    margin: 10px 0;
+}
+
+.vehicle-card p {
+    margin: 5px 0;
+}
