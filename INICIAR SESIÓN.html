@@ -1,0 +1,193 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar Sesión</title>
+<!-- Google Sign-In -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="TU_CLIENT_ID.apps.googleusercontent.com">
+<!-- Facebook Login -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : 'TU_APP_ID',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v12.0'
+    });
+  };
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/PRINCIPA/IMAG-VIDE/Sesion.jpg"); /* Reemplaza con la URL de tu imagen */
+        background-size: cover;
+        background-position: center;
+        animation: movimientoFondo 15s infinite alternate; /* Animación de movimiento */
+    }
+    @keyframes movimientoFondo {
+        0% {
+            background-position: top left;
+        }
+        100% {
+            background-position: bottom right;
+        }
+    }
+    .login-container {
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.822);
+        width: 450px;
+        text-align: center;
+        .login-container {
+    /* Otros estilos... */
+    color: white; /* Cambia el color del texto a blanco */
+}
+    }
+    .login-container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 3px solid #000000;
+        border-radius: 4px;
+    }
+    .login-container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #000000;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .login-container input[type="submit"]:hover {
+        background-color: #0915b8;
+    }
+    .login-container .social-buttons {
+        margin-top: 20px;
+    }
+
+    .social-buttons {
+    text-align: center; /* Para centrar los botones */
+}
+
+.social-buttons > div {
+    margin: 10px; /* Espacio entre los botones */
+    display: inline-block; /* Para que los botones estén en línea */
+    background-color: #000000; /* Color de fondo del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+}
+
+.social-buttons > div:hover {
+    background-color: #ffffff; /* Color de fondo al pasar el mouse */
+}
+
+header {
+            position: fixed; /* Posición fija para que esté siempre visible */
+            top: 0; /* Alineado en la parte superior */
+            left: 0; /* Alineado en la parte izquierda */
+            width: 100%; /* Ancho completo */
+            padding: 10px 20px; /* Relleno interno del header */
+            background-color: transparent; /* Fondo transparente */
+            z-index: 1000; /* Z-index alto para asegurar que esté por encima de otros elementos */
+        }
+
+        /* Estilos para los enlaces dentro del header */
+        header a {
+            color: #000000; /* Color del texto de los enlaces */
+            text-decoration: none; /* Quita el subrayado de los enlaces */
+            margin-right: 20px; /* Margen derecho entre enlaces */
+            font-weight: bold; /* Texto en negrita */
+            transition: color 0.3s ease; /* Transición suave del color */
+            font-size: 20px;
+        }
+
+        header a:hover {
+            color: #ffffff; /* Cambia el color al pasar el cursor */
+        }
+
+        /* Estilos para el botón */
+        .boton-intro {
+            position: absolute; /* Posición absoluta en relación con el body */
+            top: 20px; /* Distancia desde la parte superior */
+            left: 20px; /* Distancia desde la izquierda */
+            padding: 10px 20px; /* Relleno interior del botón */
+            color: #000000; /* Color del texto del botón */
+            text-decoration: none; /* Quita el subrayado del texto */
+            border-radius: 5px; /* Bordes redondeados */
+            z-index: 1000; /* Asegura que esté por encima de otros contenidos */
+            font-weight: bold; /* Texto en negrita */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave de color de fondo y texto */
+        }
+
+        
+</style>
+</head>
+<body>
+    <header>
+        <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/INTRO.html">"VOLVER A VER INTRO"</a>
+    </header>
+    
+
+<div class="login-container">
+    <h2 style="color: white;">Iniciar Sesión</h2>
+    <form action="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/EMPRESA.html" method="post" target="_blank">
+        <input type="text" name="username" placeholder="Nombre de usuario" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+    <div class="social-buttons">
+        <div id="google-signin-btn" class="g-signin2" data-onsuccess="onGoogleSignIn"></div>
+        <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-scope="public_profile,email" onlogin="checkLoginState();"></div>
+    </div>
+    <p style="color: white;">O inicia sesión con tu número de teléfono</p>
+    <form action="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/EMPRESA.html" method="post" target="_blank">
+        <input type="tel" name="phone" placeholder="Número de teléfono" required>
+        <input type="submit" value="Iniciar Sesión con Teléfono">
+    </form>
+</div>
+
+<script>
+    function onGoogleSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // No necesariamente util para tu aplicación
+        console.log('Nombre: ' + profile.getName());
+        console.log('Imagen URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // Este campo puede estar vacío si el usuario ha configurado su cuenta para no compartir su email con aplicaciones externas
+    }
+
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    }
+
+    function statusChangeCallback(response) {
+        if (response.status === 'connected') {
+            console.log('Logged into Facebook and authenticated.');
+            FB.api('/me', function(response) {
+                console.log('Nombre: ' + response.name);
+                console.log('ID: ' + response.id);
+                console.log('Email: ' + response.email);
+            });
+        } else {
+            console.log('El usuario no está autenticado con Facebook.');
+        }
+    }
+</script>
+
+</body>
+</html>

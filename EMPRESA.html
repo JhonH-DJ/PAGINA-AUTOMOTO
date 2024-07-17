@@ -1,0 +1,887 @@
+<html lang="es">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Venta de Motos</title>
+    <style>
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('C:/Users/jhonh/Documents/PAGINA WEB FINAL/PRINCIPA/IMAG-VIDE'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+    .logo-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        }
+
+    .logo-text img {
+        max-width: 15%;
+        margin-right: 25px; /* Aumenta el espacio entre la imagen y los párrafos */
+        margin-left: 25px;
+        }
+
+    .logo-text p {
+        margin: 0; /* Elimina el margen predeterminado de los párrafos */
+        font-size: 30px;
+        color: #ffffff; /* Color de fuente blanco */
+        text-shadow: 
+        0 0 5px #ff4500, /* Sombra naranja */
+        0 0 10px #ff4500, /* Sombra naranja */
+        0 0 20px #ff4500, /* Sombra naranja */
+        0 0 40px #ff4500, /* Sombra naranja */
+        0 0 80px #ff4500, /* Sombra naranja */
+        0 0 160px #ff4500; /* Sombra naranja */
+        animation: changeColor 5s infinite alternate;
+        }
+    
+    @keyframes changeColor {
+        50% {
+        text-shadow:
+            0 0 5px #ff4500,
+            0 0 10px #ff4500,
+            0 0 20px #ff4500,
+            0 0 40px #ff4500,
+            0 0 80px #ff4500,
+            0 0 160px #ff4500;
+        }
+    
+    100% {
+        text-shadow:
+            0 0 5px #00bfff, /* Sombra azul */
+            0 0 10px #00bfff, /* Sombra azul */
+            0 0 20px #00bfff, /* Sombra azul */
+            0 0 40px #00bfff, /* Sombra azul */
+            0 0 80px #00bfff, /* Sombra azul */
+            0 0 160px #00bfff; /* Sombra azul */
+        }      
+        }
+
+    header {
+        background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/PRINCIPA/IMAG-VIDE/fugos.jpg");  
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center;    
+        color: #fff;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        width: 100%; 
+        font-size: 22px;
+        border: 6px solid #000000; /* Borde sólido negro */
+        box-shadow: 0 0 10px rgba(22, 4, 187, 0.5); /* Sombra difusa */
+        text-shadow: 
+            0 0 5px #00bfff, /* Sombra azul */
+            0 0 10px #00bfff, /* Sombra azul */
+            0 0 20px #00bfff, /* Sombra azul */
+            0 0 40px #00bfff, /* Sombra azul */
+            0 0 80px #00bfff, /* Sombra azul */
+            0 0 160px #00bfff; /* Sombra azul */
+        }
+
+
+    header h1 {
+        margin: 0;
+        }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: inline;
+        }
+
+    nav ul li {
+        display: inline-block;
+        margin-left: 20px;
+        }
+
+    nav ul li:first-child {
+        margin-left: 0;
+        }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 45px;
+        display: inline-block;
+        }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+    .dropdown-content a {
+        color: rgba(255, 255, 255, 0);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+    .dropdown-content a:hover {
+        background-color: #000000;
+        }
+
+    #inicio {
+        cursor: pointer;
+        transition: color 0.3s;
+        padding: 40px;
+        }
+
+    #inicio:hover {
+        color: rgb(0, 0, 0); 
+        }
+
+    a {
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s;
+        }
+
+    a:hover {
+        color: rgb(0, 0, 0);
+        }
+
+        body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0px;
+        padding: 0px;
+        background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/PRINCIPA/IMAG-VIDE/fugos.jpg"); 
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center;
+        }
+
+    .logo-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        }
+
+    .logo-text img {
+        max-width: 15%;
+        margin-right: 25px; /* Aumenta el espacio entre la imagen y los párrafos */
+        margin-left: 25px;
+        }
+
+    .logo-text p {
+        margin: 0; /* Elimina el margen predeterminado de los párrafos */
+        font-size: 30px;
+        color: #ffffff; /* Color de fuente blanco */
+        text-shadow: 
+        0 0 5px #ff4500, /* Sombra naranja */
+        0 0 10px #ff4500, /* Sombra naranja */
+        0 0 20px #ff4500, /* Sombra naranja */
+        0 0 40px #ff4500, /* Sombra naranja */
+        0 0 80px #ff4500, /* Sombra naranja */
+        0 0 160px #ff4500; /* Sombra naranja */
+        animation: changeColor 2s infinite alternate;
+        }
+    
+        @keyframes changeColor {
+    50% {
+        text-shadow:
+            0 0 5px #ff4500,
+            0 0 10px #ff4500,
+            0 0 20px #ff4500,
+            0 0 40px #ff4500,
+            0 0 80px #ff4500,
+            0 0 160px #ff4500;
+    }
+
+    95% {
+        text-shadow:
+            0 0 5px #32cd32, /* Sombra verde */
+            0 0 10px #32cd32, /* Sombra verde */
+            0 0 20px #32cd32, /* Sombra verde */
+            0 0 40px #32cd32, /* Sombra verde */
+            0 0 80px #32cd32, /* Sombra verde */
+            0 0 160px #32cd32; /* Sombra verde */
+    }
+
+    75% {
+        text-shadow:
+            0 0 5px #8a2be2, /* Sombra morada */
+            0 0 10px #8a2be2, /* Sombra morada */
+            0 0 20px #8a2be2, /* Sombra morada */
+            0 0 40px #8a2be2, /* Sombra morada */
+            0 0 80px #8a2be2, /* Sombra morada */
+            0 0 160px #8a2be2; /* Sombra morada */
+    }
+
+    100% {
+        text-shadow:
+            0 0 5px #00bfff, /* Sombra azul */
+            0 0 10px #00bfff, /* Sombra azul */
+            0 0 20px #00bfff, /* Sombra azul */
+            0 0 40px #00bfff, /* Sombra azul */
+            0 0 80px #00bfff, /* Sombra azul */
+            0 0 160px #00bfff; /* Sombra azul */
+    }
+}
+
+        header {
+        background: #000000;
+        color: #fff;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        width: 100%; 
+        font-size: 22px;
+        border: 6px solid #000000; /* Borde sólido negro */
+        box-shadow: 0 0 10px rgba(22, 4, 187, 0.5); /* Sombra difusa */
+        text-shadow: 
+            0 0 5px #00bfff, /* Sombra azul */
+            0 0 10px #00bfff, /* Sombra azul */
+            0 0 20px #00bfff, /* Sombra azul */
+            0 0 40px #00bfff, /* Sombra azul */
+            0 0 80px #00bfff, /* Sombra azul */
+            0 0 160px #00bfff; /* Sombra azul */
+            
+        }
+
+
+    header h1 {
+        margin: 0;
+        }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: inline;
+        }
+
+    nav ul li {
+        display: inline-block;
+        margin-left: 20px;
+        }
+
+    nav ul li:first-child {
+        margin-left: 0;
+        }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 45px;
+        display: inline-block;
+        }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+    .dropdown-content a {
+        color: rgb(255, 255, 255);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+    .dropdown-content a:hover {
+        background-color: #000000;
+        }
+
+    #inicio {
+        cursor: pointer;
+        transition: color 0.3s;
+        padding: 40px;
+        }
+
+    #inicio:hover {
+        color: rgb(0, 0, 0); 
+        }
+
+    a {
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s;
+        }
+
+    a:hover {
+        color: rgb(0, 0, 0);
+        }
+
+
+    .image-slider {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Ajusta la altura según tus necesidades */
+        overflow: hidden;
+        }
+
+        .slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%); /* Inicialmente fuera de la pantalla a la izquierda */
+    transition: transform 1s ease-in-out; /* Transición de transformación */
+}
+
+.slide.active {
+    transform: translateX(0%); /* Mostrar la diapositiva activa desde la izquierda */
+    transition: transform 1s ease-in-out; /* Transición de transformación */
+}
+
+.slide.previous {
+    transform: translateX(100%); /* Desplazar la diapositiva anterior hacia la derecha */
+    transition: transform 1s ease-in-out; /* Transición de transformación */
+}
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+        }
+
+    .slide .slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000000; /* Color del texto */
+    font-size: 44px; /* Tamaño del texto */
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+    text-shadow: 
+    0 0 5px #00ce00,
+        0 0 10px #00ce00,
+        0 0 20px #00ce00,
+        0 0 40px #00ce00,
+        0 0 80px #00ce00,
+        0 0 160px #00ce00; /* Sombra azul */
+        
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+.additional-content {
+            margin-right: 20px; /* Margen derecho según necesidad */
+            text-align: right; /* Alineación del contenido a la derecha */
+        }
+
+        
+        .additional-content h1 {
+            text-align: left; /* Alineación del h1 a la izquierda */
+            color: rgb(255, 255, 255); /* Color del texto blanco */
+            margin-left: 160px; /* Margen izquierdo */
+            text-shadow: 0 0 40px rgb(255, 0, 0);
+        }
+        .additional-content h2 {
+            text-align: right; /* Alineación del h2 a la derecha */
+            color: rgb(255, 255, 255); /* Color del texto blanco */
+            margin-left: auto; /* Margen izquierdo automático para alinearse a la derecha */
+            margin-right: 20px; /* Margen derecho */
+            text-shadow: 0 0 40px rgb(0, 183, 255);
+        }
+        .additional-content p {
+            text-align: right; /* Alineación del p a la derecha */
+            color: white; /* Color del texto blanco */
+            margin-left: auto; /* Margen izquierdo automático para alinearse a la derecha */
+            margin-right: 20px; /* Margen derecho */
+        }
+
+
+        .additional-content form {
+            background-color: #000000; /* Color de fondo del formulario */
+            color: #ffffff;
+            padding: 15px; /* Espaciado interno del formulario */
+            border-radius: 8px; /* Borde redondeado */
+            margin-top: 10px; /* Margen superior */
+            max-width: 400px; /* Ancho máximo del formulario */
+            margin-left: auto; /* Centrar el formulario horizontalmente */
+            margin-right: 20px; /* Margen derecho para alinearse con h2 y p */
+        }
+        .additional-content form label {
+            display: block; /* Hace que las etiquetas ocupen toda la anchura disponible */
+            margin-bottom: 8px; /* Margen inferior entre etiquetas */
+            text-align: left; /* Alineación del texto de las etiquetas a la izquierda */
+        }
+        .additional-content form input[type="text"],
+        .additional-content form input[type="number"],
+        .additional-content form input[type="file"],
+        .additional-content form input[type="submit"] {
+            width: 100%; /* Ancho completo para los inputs */
+            padding: 8px; /* Espaciado interno */
+            margin-bottom: 10px; /* Margen inferior */
+            border: 1px solid #ccc; /* Borde gris */
+            border-radius: 4px; /* Borde redondeado */
+            box-sizing: border-box; /* Incluye el padding y border en el ancho */
+        }
+        .additional-content form input[type="submit"] {
+            background-color: #000000; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            cursor: pointer; /* Cursor de tipo puntero */
+        }
+        .additional-content form input[type="submit"]:hover {
+            background-color: #0148e2; /* Color de fondo al pasar el mouse */
+        }
+
+        .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.video {
+    width: 820px;
+    height: 540px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1; /* Asegura que el video esté sobre las llamas */
+    background-color: black; /* Añade fondo negro */
+    box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.8), 
+                0 0 30px 20px rgba(0, 0, 255, 0.6), 
+                0 0 40px 30px rgba(132, 2, 150, 0.966), 
+                0 0 50px 40px rgba(0, 0, 255, 0.2);
+    animation: flameEffect 2s infinite;
+}
+
+@keyframes flameEffect {
+    0% {
+        box-shadow: 0 0 20px 10px rgba(2, 121, 201, 0.8), 
+                    0 0 30px 20px rgba(112, 3, 201, 0.6), 
+                    0 0 40px 30px rgba(192, 2, 192, 0.6), 
+                    0 0 50px 40px rgba(228, 48, 3, 0.836);
+    }
+    50% {
+        box-shadow: 0 0 30px 15px rgba(0, 0, 255, 1), 
+                    0 0 40px 25px rgba(1, 173, 241, 0.8), 
+                    0 0 50px 35px rgba(3, 114, 179, 0.6), 
+                    0 0 60px 45px rgba(228, 48, 3, 0.836);
+    }
+    100% {
+        box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.8), 
+                    0 0 30px 20px rgba(6, 182, 206, 0.6), 
+                    0 0 40px 30px rgba(2, 122, 192, 0.521), 
+                    0 0 50px 40px rgba(228, 48, 3, 0.836);
+    }
+}
+
+header {
+    z-index: 2; /* Asegura que el header esté sobre el contorno de llamas */
+    position: relative; /* Si no está ya posicionado, asegúrate de que tenga un contexto de apilamiento */
+}
+
+
+
+
+        footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    border: 6px solid #000000; /* Borde sólido negro */
+    box-shadow: 0 0 18px rgba(0, 174, 255, 0.863); /* Sombra difusa */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links div {
+    text-align: left;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    text-align: left;
+    max-width: 300px;
+}
+
+.eu-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.eu-info img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.map iframe {
+    border: 0;
+    border-radius: 5px;
+}
+
+.footer-notes {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-notes a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-notes a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a img {
+    width: 64px;
+    transition: transform 0.3s ease; /* Para una transición suave */
+}
+
+.social-links a img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.footer-credit {
+    text-align: center;
+}
+
+.footer-credit p {
+    margin: 0;
+}
+
+.container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            color: #ffffff;
+        }
+
+        #playButton {
+            display: none; /* El botón está oculto inicialmente */
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="logo-text">
+        <p>AUTOMOTO</p>
+        <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\logo automoto.png" alt="Logo de la empresa">  
+        <p>CHACHAPOYAS</p>
+    </div>
+
+    <audio id="backgroundMusic" src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\YouTube_qUeJ8rjmm1c.mp3" autoplay loop>
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <br>
+    <header>
+        <nav>
+            <ul>
+                    <li class="dropdown">
+                        <span id="inicio">INICIO</span>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/MSIION/MISION.html">MISION</a>
+                            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/VISION3/VISION.html">VISION</a>
+                            <a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/DESARROLO/DESARROLO.html">DESARROLLO</a>
+                        </div>
+                    </li>
+                <li><a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/PRINCIPAL.html">COMPRAR</a></li>
+                <li><a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/CONTACTTO/CONTACTO.html#contacto">CONTACTO</a></li>
+                <li><a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/INICIAR%20SESIÓN.html">INICIAR SESIÓN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="image-slider">
+            <div class="slide">
+                <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\moto negra.jpg" alt="Imagen 1">
+                <div class="slide-text">LO MEJOR EN MOTOS Y MODELOS</div>
+            </div>
+            <div class="slide">
+                <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\TRANSPORTE-MOTOS.jpg" alt="Imagen 2">
+                <div class="slide-text">TRANSPORTE DE MOTOS</div>
+            </div>
+            <div class="slide">
+                <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\auto amarillo.jpg" alt="Imagen 2">
+                <div class="slide-text">LO MEJOR EN AUTOS Y MODELOS</div>
+            </div>
+            <div class="slide">
+                <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\carga auto.jpg" alt="Imagen 2">
+                <div class="slide-text">TRASPORTE DE AUTOS</div>
+            </div>
+        </div>
+
+        <section class="additional-content">
+            <h1>PODEMOS COTIZAR EL PRECIO DE <br>
+                LA MOTO DESEADA</h1>
+            <h2>RECIBE LA ATENCIÓN INMEDIATA</h2>
+            <p>Realizamos atención inmediata para el gusto del cliente<br>
+               donde podemos cotizar el precio de la moto o auto deseada.</p>
+        
+            
+            <form action="/submit-form" method="POST">
+                <label for="marca">Marca:</label><br>
+                <input type="text" id="marca" name="marca" required><br>
+        
+                <label for="modelo">Modelo:</label><br>
+                <input type="text" id="modelo" name="modelo" required><br>
+        
+                <label for="ano">Año:</label><br>
+                <input type="number" id="ano" name="ano" min="1900" max="2099" required><br>
+        
+                <label for="kilometros">Kilómetros:</label><br>
+                <input type="number" id="kilometros" name="kilometros" required><br>
+        
+                <label for="fotos">Adjuntar fotografías:</label><br>
+                <input type="file" id="fotos" name="fotos" accept="image/*" multiple><br>
+        
+                <input type="submit" value="Enviar">
+            </form>
+            <div id="success-message" class="success-message">Enviado correctamente</div>
+    </div>
+        </section>
+        <br><br>
+        <div class="video-container">
+            <video class="video" autoplay muted loop>
+                <source src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\motos vid.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video><br><br><br>
+            <div class="container" style="text-align: justify;">
+                <p style="text-align: center;">AUTOMOTO CACHAPOYAS es una empresa dedicada al sector automotriz en Chachapoyas desde 2004. Con más<br> 
+            de 20 años de experiencia, somos líderes del mercado de la venta de autos y motos de primera mano en la<br> 
+            región. En nuestras instalaciones encontrarás todo importado en (autos y motos) de diferentes modelos:<br>  
+            deportivas, lujos, moda, pisteras, camionetas,accesorios y más, todos de lo mejor en kilometraje y en estado<br>
+            impecable.Contamos con un servicio técnico especializado (taller), transporte específico de autos y<br>
+            motos (Motocargo) y (Autocargo)somos una empresa oficial. En nuestro catálogo encontrarás vehículos de <br> 
+            marcas reconocidas como Aprillia,BMW, Ducati, Harley Davidson, Honda, Indian, Kawasaki, Suzuki, Yamaha, Triumph, Toyota, Nissan, Hyundai, Ford, Chevrolet, y muchas otras...
+            Con nuestro servicio de transporte (Motocargo) compra tu vehículo desde cualquier parte del Perú (Lima, Arequipa, Trujillo, Chiclayo, Piura, Iquitos, Pucallpa, Tarapoto, Moyobamba, Bagua, Jaén, Tingo María, Huánuco, Cusco, Ayacucho, Huancayo, Puno, Juliaca) y te lo llevamos hasta tu puerta.
+            <br><br>
+            ¡¡¡ Ven y descubre por qué AUTOMOTO CACHAPOYAS es la mejor opción para la venta de autos y motos!!!</p>
+        </div><br><br><br>
+            <video class="video" autoplay muted loop>
+                <source src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\autos.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        </main>
+    <br>
+    <br><br><br>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <div>
+                    <h4>"AUTOMOTO<br>
+                        CHACHAPOYAS"</h4>
+                    <ul>
+                        <li><a href="file:///C:/Users/jhonh/Documents/PAGINA%20WEB%20FINAL/CATALOGO%20MOTOS.html">COMPRA TU MOTO</a></li>
+                        <li><a href="#">TRANSPORTE PARA TU MOTO</a></li>
+                        <li><a href="#">SERVICIO TÉCNICO – TALLER</a></li>
+                        <li><a href="#">TRASPORTE PARA TU AUTO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>SERVICIOS</h4>
+                    <ul>
+                        <li><a href="#">INICIO</a></li>
+                        <li><a href="#">COMPRAR</a></li>
+                        <li><a href="#">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p><strong>Teléfono:</strong> 900064446</p>
+                <p><strong>WhatsApp:</strong> 964918818</p>
+                <p><strong>Email:</strong> info@automotoch.com</p>
+                <p><strong>Lunes a viernes:</strong> 8:00 - 13:00 / 15:00 - 20:00</p>
+                <p><strong>SÁBADOS Y DOMINGOS:</strong> 10:00 a 13:00</p>
+                <p><strong>Dirección:</strong> JRN. Salamanca 322</p>
+            </div>
+            <div class="eu-info">
+                <img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\logo.png" alt="EU Logo">
+                <p>IMPORTADOS DE EE.UU Y CHINA</p>
+                <p>NEW GENERATION</p>
+                <p>Plan de Transformación y Mejora</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            
+            <div class="footer-notes">
+                <a href="#">CONDICIONES <br>
+                    DE VENTA</a>
+                <a href="#">AVISO<br>
+                            LEGAL</a>
+                <a href="#">POLÍTICA DE<br>
+                            PRIVACIDAD</a>
+                <a href="#">POLÍTICA DE<br>
+                            COOKIES</a>
+                <a href="#">DECLARACIÓN DE<br>
+                            ACCESIBILIDAD</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100081344626108"><img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\fefe.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/jhonhardin_2003/"><img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\instre.jpg" alt="Instagram"></a>
+                <a href="https://www.youtube.com/@jhonh6226"><img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\youtub3.jpg" alt="YouTube"></a>
+                <a href="https://bit.ly/JHONHDJ"><img src="C:\Users\jhonh\Documents\PAGINA WEB FINAL\PRINCIPA\IMAG-VIDE\wtas.jpg" alt="WhatsApp"></a>
+            </div>
+        </div>
+        <div class="footer-credit">
+            <p>Creado por "Jhon H" </p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var inicio = document.getElementById('inicio');
+            var dropdownContent = document.getElementById('dropdownContent');
+    
+            inicio.addEventListener('click', function() {
+                if (dropdownContent.style.display === 'block') {
+                    dropdownContent.style.display = 'none';
+                } else {
+                    dropdownContent.style.display = 'block';
+                }
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+    const intervalTime = 3000; // Tiempo entre cambios de imagen en milisegundos
+
+    function nextSlide() {
+        const previousIndex = currentIndex;
+
+        // Mueve la clase 'previous' a la diapositiva anterior
+        slides[previousIndex].classList.remove("active");
+        slides[previousIndex].classList.add("previous");
+
+        // Actualiza el índice de la diapositiva actual
+        currentIndex = (currentIndex + 1) % slides.length;
+
+        // Muestra la siguiente diapositiva
+        slides[currentIndex].classList.add("active");
+
+        // Remueve la clase 'previous' después de la transición
+        setTimeout(() => {
+            slides[previousIndex].classList.remove("previous");
+        }, 1000); // Espera 1 segundo antes de quitar la clase 'previous'
+    }
+
+    setInterval(nextSlide, intervalTime);
+});
+
+
+
+const header = document.querySelector('header');
+
+// Obtener la altura del encabezado
+const headerHeight = header.offsetHeight;
+
+// Función para verificar el desplazamiento y ajustar la posición del encabezado
+function checkScroll() {
+    // Obtener la posición vertical actual de desplazamiento
+    const scrollPosition = window.scrollY || window.pageYOffset;
+
+    // Si la posición de desplazamiento es mayor que la altura del encabezado, fijar el encabezado
+    if (scrollPosition > headerHeight) {
+        header.style.position = 'fixed';
+        header.style.top = '0';
+    } else {
+        header.style.position = 'static';
+    }
+}
+
+// Escuchar eventos de desplazamiento
+window.addEventListener('scroll', checkScroll);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('backgroundMusic');
+
+            // Manejar la reproducción automática en caso de bloqueo
+            document.addEventListener('click', function() {
+                audio.play().catch(error => {
+                    console.log('La reproducción automática fue bloqueada. Permita la reproducción manual:', error);
+                });
+            });
+        });
+
+    </script>
+        
+</body>
+</html>

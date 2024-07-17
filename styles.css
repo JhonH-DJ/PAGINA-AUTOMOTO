@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("C:/Users/jhonh/Documents/PAGINA WEB FINAL/PRINCIPA/IMAG-VIDE/tarde.jpg");
+    color: #333;
+}
+.logo-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    }
+
+.logo-text img {
+    max-width: 15%;
+    margin-right: 25px; /* Aumenta el espacio entre la imagen y los párrafos */
+    margin-left: 25px;
+    }
+
+.logo-text p {
+    margin: 0; /* Elimina el margen predeterminado de los párrafos */
+    font-size: 30px;
+    color: #ffffff; /* Color de fuente blanco */
+    text-shadow: 
+    0 0 5px #ff4500, /* Sombra naranja */
+    0 0 10px #ff4500, /* Sombra naranja */
+    0 0 20px #ff4500, /* Sombra naranja */
+    0 0 40px #ff4500, /* Sombra naranja */
+    0 0 80px #ff4500, /* Sombra naranja */
+    0 0 160px #ff4500; /* Sombra naranja */
+    animation: changeColor 5s infinite alternate;
+    }
+
+@keyframes changeColor {
+    50% {
+    text-shadow:
+        0 0 5px #ff4500,
+        0 0 10px #ff4500,
+        0 0 20px #ff4500,
+        0 0 40px #ff4500,
+        0 0 80px #ff4500,
+        0 0 160px #ff4500;
+    }
+
+100% {
+    text-shadow:
+        0 0 5px #00bfff, /* Sombra azul */
+        0 0 10px #00bfff, /* Sombra azul */
+        0 0 20px #00bfff, /* Sombra azul */
+        0 0 40px #00bfff, /* Sombra azul */
+        0 0 80px #00bfff, /* Sombra azul */
+        0 0 160px #00bfff; /* Sombra azul */
+    }      
+    }
+header {
+    background-color: #000000;  
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%; 
+    font-size: 22px;
+    border: 6px solid #000000; /* Borde sólido negro */
+    box-shadow: 0 0 10px rgba(22, 4, 187, 0.5); /* Sombra difusa */
+    text-shadow: 
+        0 0 5px #00bfff, /* Sombra azul */
+        0 0 10px #00bfff, /* Sombra azul */
+        0 0 20px #00bfff, /* Sombra azul */
+        0 0 40px #00bfff, /* Sombra azul */
+        0 0 80px #00bfff, /* Sombra azul */
+        0 0 160px #00bfff; /* Sombra azul */
+    }
+
+
+header h1 {
+    margin: 0;
+    }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    }
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    }
+
+nav ul li:first-child {
+    margin-left: 0;
+    }
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 45px;
+    display: inline-block;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+.dropdown-content a {
+    color: rgba(255, 255, 255, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+.dropdown-content a:hover {
+    background-color: #000000;
+    }
+
+#inicio {
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 40px;
+    }
+
+#inicio:hover {
+    color: rgb(0, 0, 0); 
+    }
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    }
+
+a:hover {
+    color: rgb(0, 0, 0);
+    }
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-form, .contact-info {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 45%;
+}
+
+.contact-form h2, .contact-info h2, .contact-info h3 {
+    margin-top: 0;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact-form .error-message {
+    color: red;
+    font-size: 12px;
+    display: none; /* Hide error messages by default */
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info .contact-details {
+    margin-top: 20px;
+}
